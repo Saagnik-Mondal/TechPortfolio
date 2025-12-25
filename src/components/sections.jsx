@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import { GlowCard, MagneticButton } from './ui'
 import { Timeline } from './timeline'
+import profileImage from '../assets/profile.png'
 
 // ============ Hero Section ============
 export function Hero({ typedText, scrollTo }) {
@@ -67,7 +68,7 @@ export function Hero({ typedText, scrollTo }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item, i) => (
+          {['About', 'Experience', 'Skills', 'Projects'].map((item, i) => (
             <motion.button 
               key={item} 
               onClick={() => scrollTo(item.toLowerCase())}
@@ -80,6 +81,26 @@ export function Hero({ typedText, scrollTo }) {
               <span className="hero-nav-text">{item}</span>
             </motion.button>
           ))}
+          <motion.a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-resume-btn"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5 }}
+            whileHover={{ y: -3, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <span>Resume</span>
+          </motion.a>
         </motion.div>
       </div>
 
@@ -125,9 +146,7 @@ export function About() {
         <div className="about-grid">
           <GlowCard className="about-card">
             <div className="about-image">
-              <div className="image-placeholder">
-                <span>SM</span>
-              </div>
+              <img src={profileImage} alt="About Me" className="about-profile-img" />
               <div className="image-border" />
             </div>
           </GlowCard>

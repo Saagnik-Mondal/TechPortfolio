@@ -565,6 +565,46 @@ body.light-theme .hero-nav-link:hover .hero-nav-text {
   text-shadow: none;
 }
 
+.hero-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--color-accent);
+  color: var(--color-dark-bg);
+  border: none;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+.hero-resume-btn:hover {
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+  background: #7affdc;
+}
+
+.hero-resume-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+body.light-theme .hero-resume-btn {
+  background: var(--color-accent-coffee);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(111, 78, 55, 0.3);
+}
+
+body.light-theme .hero-resume-btn:hover {
+  box-shadow: 0 0 30px rgba(111, 78, 55, 0.5);
+  background: #5a3d2b;
+}
+
 @media (max-width: 640px) {
   .hero-nav {
     flex-wrap: wrap;
@@ -875,6 +915,20 @@ body.light-theme .glow-card {
 body.light-theme .image-placeholder {
   background: linear-gradient(135deg, var(--color-coffee-surface), var(--color-coffee-card));
   color: var(--color-accent-coffee);
+}
+
+.about-profile-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 16px;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+.glow-card:hover .about-profile-img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 
 .image-border {
