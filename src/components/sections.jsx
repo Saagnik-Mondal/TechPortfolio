@@ -82,7 +82,7 @@ export function Hero({ typedText, scrollTo }) {
             </motion.button>
           ))}
           <motion.a
-            href="/resume.pdf"
+            href={import.meta.env.VITE_RESUME_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="hero-resume-btn"
