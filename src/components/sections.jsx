@@ -168,7 +168,7 @@ export function About() {
               transition={{ delay: 0.3 }}
             >
               Currently pursuing <span className="highlight">B.Tech in Computer Science</span> at
-              Jalpaiguri Government Engineering College (2022-2026). I've completed multiple
+              Jalpaiguri Government Engineering College (2023-2027). I've completed multiple
               <span className="highlight"> Coursera certifications</span> in ML, Deep Learning, and NLP,
               building hands-on expertise through personal projects and continuous learning.
             </motion.p>
