@@ -22,7 +22,7 @@ export function Hero({ typedText, scrollTo }) {
 
         <div className="hero-title-wrapper">
           <div className="overflow-hidden">
-            <motion.h1 
+            <motion.h1
               className="hero-title"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -32,7 +32,7 @@ export function Hero({ typedText, scrollTo }) {
             </motion.h1>
           </div>
           <div className="overflow-hidden">
-            <motion.p 
+            <motion.p
               className="hero-subtitle"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -43,7 +43,7 @@ export function Hero({ typedText, scrollTo }) {
           </div>
         </div>
 
-        <motion.p 
+        <motion.p
           className="hero-typed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -52,7 +52,7 @@ export function Hero({ typedText, scrollTo }) {
           {typedText}<span className="cursor"></span>
         </motion.p>
 
-        <motion.p 
+        <motion.p
           className="hero-desc"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,15 +62,15 @@ export function Hero({ typedText, scrollTo }) {
           <br />B.Tech CSE Student at JGEC • Open to Internships
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="hero-nav"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
           {['About', 'Experience', 'Skills', 'Projects'].map((item, i) => (
-            <motion.button 
-              key={item} 
+            <motion.button
+              key={item}
               onClick={() => scrollTo(item.toLowerCase())}
               className="hero-nav-link"
               initial={{ opacity: 0, y: 20 }}
@@ -93,18 +93,18 @@ export function Hero({ typedText, scrollTo }) {
             whileTap={{ scale: 0.98 }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
             </svg>
             <span>Resume</span>
           </motion.a>
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="scroll-indicator"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -115,9 +115,9 @@ export function Hero({ typedText, scrollTo }) {
         <motion.div
           className="scroll-arrow"
           animate={{ opacity: [1, 0.3, 1], y: [0, 5, 0] }}
-          transition={{ 
-            duration: 1.5, 
-            repeat: Infinity, 
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
             ease: 'easeInOut'
           }}
         >
@@ -133,7 +133,7 @@ export function About() {
   return (
     <section id="about" className="section">
       <div className="section-content">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -158,7 +158,7 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Hey! 👋 I'm an aspiring <span className="highlight">AI/ML Engineer</span> passionate 
+              Hey! 👋 I'm an aspiring <span className="highlight">AI/ML Engineer</span> passionate
               about building intelligent systems that solve real-world problems.
             </motion.p>
             <motion.p
@@ -167,13 +167,13 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Currently pursuing <span className="highlight">B.Tech in Computer Science</span> at 
-              Jalpaiguri Government Engineering College (2022-2026). I've completed multiple 
-              <span className="highlight"> Coursera certifications</span> in ML, Deep Learning, and NLP, 
+              Currently pursuing <span className="highlight">B.Tech in Computer Science</span> at
+              Jalpaiguri Government Engineering College (2022-2026). I've completed multiple
+              <span className="highlight"> Coursera certifications</span> in ML, Deep Learning, and NLP,
               building hands-on expertise through personal projects and continuous learning.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               className="about-stats"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -210,7 +210,7 @@ const experienceData = [
         <p className="exp-company">Pehchaan The Street School (Trust)</p>
         <span className="exp-duration">Jun 2025 - Aug 2025 · 3 months</span>
         <p className="exp-desc">
-          Led project planning and coordination for educational initiatives. Managed timelines, 
+          Led project planning and coordination for educational initiatives. Managed timelines,
           collaborated with cross-functional teams, and ensured successful delivery of community-focused programs.
         </p>
         <div className="exp-skills">
@@ -229,7 +229,7 @@ const experienceData = [
         <p className="exp-company">Codefeast</p>
         <span className="exp-duration">Sep 2024 - Dec 2024 · 4 months · Remote</span>
         <p className="exp-desc">
-          Developed and executed social media strategies to boost brand visibility. Analyzed engagement metrics, 
+          Developed and executed social media strategies to boost brand visibility. Analyzed engagement metrics,
           created content calendars, and optimized campaigns for maximum reach.
         </p>
         <div className="exp-skills">
@@ -246,7 +246,7 @@ export function Experience() {
   return (
     <section id="experience" className="section">
       <div className="section-content">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -281,7 +281,7 @@ export function Skills() {
   return (
     <section id="skills" className="section">
       <div className="section-content">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -314,40 +314,26 @@ export function Skills() {
 
 // ============ Projects Section ============
 const techLogos = {
-  'PyTorch': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
-  'CUDA': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nvidia/nvidia-original.svg',
-  'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
-  'LangChain': 'https://cdn.worldvectorlogo.com/logos/langchain-1.svg',
-  'OpenAI': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg',
-  'Pinecone': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pinecone.svg',
-  'YOLOv8': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-  'OpenCV': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg',
-  'Streamlit': 'https://streamlit.io/images/brand/streamlit-mark-color.svg',
-  'Transformers': 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg',
-  'PEFT': 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg',
-  'bitsandbytes': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+  'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  'Pandas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+  'NumPy': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
+  'Matplotlib': 'https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg',
+  'Seaborn': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  'Jupyter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg'
 }
 
 const projects = [
   {
-    title: "Neural Style Transfer",
-    desc: "Real-time artistic style transfer using deep neural networks. Transform any image into artwork styles of famous painters using custom trained CNN models.",
-    tech: ["PyTorch", "CUDA", "FastAPI"]
+    title: "Titanic Survival Analysis",
+    desc: "Analyzed passenger data to understand survival patterns. I cleaned complex raw data, handled missing values, and created visualizations to reveal how factors like gender and class affected survival rates.",
+    tech: ["Python", "Pandas", "NumPy", "Seaborn"],
+    link: "https://github.com/Saagnik-Mondal/Data-Cleaning-and-Analysis"
   },
   {
-    title: "RAG Document System",
-    desc: "Intelligent document Q&A system with semantic search and context-aware response generation. Upload documents and ask questions in natural language.",
-    tech: ["LangChain", "OpenAI", "Pinecone"]
-  },
-  {
-    title: "Real-time Detection",
-    desc: "Live video stream object detection and tracking system. Custom trained YOLOv8 models for real-time inference with interactive visualization.",
-    tech: ["YOLOv8", "OpenCV", "Streamlit"]
-  },
-  {
-    title: "LLM Fine-tuning Lab",
-    desc: "Platform for fine-tuning large language models using LoRA and QLoRA adapters. Efficient training on consumer hardware with quantization.",
-    tech: ["Transformers", "PEFT", "bitsandbytes"]
+    title: "NYC Taxi Trends",
+    desc: "Investigated NYC taxi trip data to uncover urban travel patterns. I cleaned and processed the dataset to remove anomalies, then analyzed how rush hours and trip durations vary throughout the week.",
+    tech: ["Python", "Pandas", "Matplotlib", "Jupyter"],
+    link: "https://github.com/Saagnik-Mondal/NYC-Taxi-Data-Wrangling"
   }
 ]
 
@@ -355,7 +341,7 @@ export function Projects() {
   return (
     <section id="projects" className="section">
       <div className="section-content">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -387,10 +373,10 @@ export function Projects() {
                       </div>
                     ))}
                   </div>
-                  <a href="#" className="project-btn">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-btn">
                     <span>View</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17L17 7M17 7H10M17 7V14"/>
+                      <path d="M7 17L17 7M17 7H10M17 7V14" />
                     </svg>
                   </a>
                 </div>
@@ -399,7 +385,7 @@ export function Projects() {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           className="projects-cta"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -420,7 +406,7 @@ export function Contact() {
   return (
     <section id="contact" className="section contact-section">
       <div className="section-content center">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -430,7 +416,7 @@ export function Contact() {
           <div className="section-line" />
         </motion.div>
 
-        <motion.h3 
+        <motion.h3
           className="contact-heading"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -439,7 +425,7 @@ export function Contact() {
           Let's Build Something <span className="gradient-text">Amazing</span>
         </motion.h3>
 
-        <motion.p 
+        <motion.p
           className="contact-desc"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -456,8 +442,8 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <MagneticButton 
-            href="mailto:sm2744@cse.jgec.ac.in" 
+          <MagneticButton
+            href="mailto:sm2744@cse.jgec.ac.in"
             className="contact-btn"
           >
             <span>Say Hello</span>
